@@ -6,7 +6,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #3b2f2f;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),url('../img/wood1.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),url('./img/wood1.jpg') no-repeat center center/cover;
   min-height: 100vh;
   display: flex;
   align-items: center;
