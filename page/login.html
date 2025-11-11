@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMERTCO | Login</title>
+
+  <!-- Font Awesome (for back arrow and eye icon) -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Reuse signup styles so visuals match; adjust path if needed -->
+  <link rel="stylesheet" href="../CSS/signup.css">
+</head>
+<body>
+
+  <div class="signup-container"> <!-- reuse same container class for consistent layout -->
+    <!-- Back Button -->
+    <div class="back-btn">
+      <a href="../index.html" title="Back to Home"><i class="fa-solid fa-arrow-left"></i> Back</a>
+    </div>
+
+    <!-- Left welcome (polygon) - on desktop will show; on mobile stacks -->
+    <section class="welcome-section">
+      <div class="polygon-box">
+        <h2>Welcome Back to SMERTCO</h2>
+        <p>We’re glad to see you again! Sign in to continue exploring our elegant furniture collections.</p>
+      </div>
+    </section>
+
+    <!-- Right: login form -->
+    <section class="form-section">
+      <h1>Sign In</h1>
+
+      <form id="login-form" class="signup-form" novalidate>
+        <fieldset>
+          <legend>Login to Your Account</legend>
+
+          <label for="login-identifier">Username or Email</label>
+          <input type="text" id="login-identifier" name="identifier" placeholder="Enter username or email" required>
+
+          <label for="login-password">Password</label>
+          <div class="input-wrap">
+            <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+            <button type="button" class="pw-toggle" aria-label="Show password">👁️</button>
+          </div>
+
+          <!-- Remember Me -->
+<div class="remember-me" id="remember-container" style="display:none;">
+  <input type="checkbox" id="remember-me"> 
+  <label for="remember-me">Remember me</label>
+</div>
+
+<!-- Message + Animation area -->
+<div id="login-msg" aria-live="polite"></div>
+<div class="login-success-animation" id="success-animation">
+  <div class="checkmark">
+    <div class="checkmark_stem"></div>
+    <div class="checkmark_kick"></div>
+  </div>
+</div>
+
+<button type="submit" class="btn">Log In</button>
+          <div id="success-animation" class="login-success-animation">
+  <div class="checkmark">
+    <div class="checkmark_stem"></div>
+    <div class="checkmark_kick"></div>
+  </div>
+</div>
+        </fieldset>
+      </form>
+
+      <p class="redirect">Don't have an account? <a href="signup.html">Create a new account</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 SMERTCO Furniture | Designed by Eutycus</p>
+  </footer>
+
+  <!-- Link login script (put file at ../JS/login.js) -->
+  <script src="../JS/login.js"></script>
+</body>
+</html>

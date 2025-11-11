@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout — SMERTCO Furniture</title>
+  <meta name="description" content="Complete your order at SMERTCO — review items, add shipping details and place your order." />
+  <link rel="stylesheet" href="../CSS/checkout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SMERTCO Home">
+        <span class="brand-icon" aria-hidden="true">🪑</span>
+        <span class="brand-name">SMERTCO</span>
+      </a>
+      <a class="back-link" href="../page/congratulation.html" aria-label="Back to shop">🔙 Back to shop</a>
+    </div>
+  </header>
+
+  <main class="container checkout-main" id="main" role="main">
+    <h1 class="page-title">Checkout</h1>
+
+    <section class="checkout-grid" aria-label="Checkout content">
+      <form id="checkout-form" class="checkout-form" novalidate>
+        <fieldset>
+          <legend>Shipping details</legend>
+
+          <label for="fullname">Full name</label>
+          <input id="fullname" name="fullname" type="text" inputmode="text" autocomplete="name" required aria-required="true" />
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-required="true" placeholder="+2547XXXXXXXX" />
+
+          <label for="address">Shipping address</label>
+          <textarea id="address" name="address" rows="3" required aria-required="true" placeholder="House number, street name, estate..."></textarea>
+
+          <div class="row split">
+            <div>
+              <label for="city">City</label>
+              <input id="city" name="city" type="text" required />
+            </div>
+            <div>
+              <label for="postcode">Postal code</label>
+              <input id="postcode" name="postcode" type="text" inputmode="numeric" />
+            </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Delivery options</legend>
+          <div class="radio-group" role="radiogroup" aria-label="Delivery options">
+            <label><input type="radio" name="delivery" value="standard" checked /> Standard delivery — Free (Nairobi)</label>
+            <label><input type="radio" name="delivery" value="express" /> Express delivery — KSh 800</label>
+            <label><input type="radio" name="delivery" value="pickup" /> Store pickup — Free</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment</legend>
+          <div class="radio-group" role="radiogroup" aria-label="Payment method">
+            <label><input type="radio" name="payment" value="mpesa" checked /> M-Pesa (pay on delivery)</label>
+            <label><input type="radio" name="payment" value="card" /> Card (enter details on next page)</label>
+          </div>
+        </fieldset>
+
+        <div class="consent">
+          <input id="agree" type="checkbox" required aria-required="true" />
+          <label for="agree">I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms</a>.</label>
+        </div>
+
+        <div class="form-footer">
+          <div id="form-message" class="form-message" aria-live="polite"></div>
+          <button id="place-order" type="submit" class="btn-primary">Place order — <span id="order-total">KSh 0</span></button>
+        </div>
+      </form>
+
+      <aside class="order-summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Order summary</h2>
+        <ul id="summary-list" class="summary-list">
+          <li class="summary-item" data-price="32000">
+            <div class="item-left">
+              <img src="../img/sofa1.jpg" alt="Classic 3-seater sofa" />
+            </div>
+            <div class="item-right">
+              <div class="item-title">Classic 3-Seater Sofa</div>
+              <div class="item-meta">KSh <span class="item-price">32,000</span></div>
+              <label class="qty">
+                Qty
+                <input type="number" min="1" value="1" class="qty-input" />
+              </label>
+            </div>
+          </li>
+
+          <li class="summary-item" data-price="9500">
+            <div class="item-left">
+              <img src="../img/cof1.jpg" alt="Wooden coffee table" />
+            </div>
+            <div class="item-right">
+              <div class="item-title">Coffee Table</div>
+              <div class="item-meta">KSh <span class="item-price">9,500</span></div>
+              <label class="qty">
+                Qty
+                <input type="number" min="1" value="1" class="qty-input" />
+              </label>
+            </div>
+          </li>
+        </ul>
+
+        <div class="summary-totals">
+          <div class="line"><span>Items</span><span id="subtotal">KSh 0</span></div>
+          <div class="line delivery"><span>Delivery</span><span id="delivery-fee">KSh 0</span></div>
+          <div class="line total"><strong>Total</strong><strong id="grand-total">KSh 0</strong></div>
+        </div>
+
+        <a class="btn-secondary continue-shopping" href="../page/congratulation.html">Continue shopping</a>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="checkout-footer" role="contentinfo">
+    <div class="container">
+      <small>Need help? <a href="#">Contact support</a> or call <a href="tel:+254793387827">+254 793 87827</a></small>
+    </div>
+  </footer>
+
+  <script src="../JS/checkout.js" defer></script>
+</body>
+</html>

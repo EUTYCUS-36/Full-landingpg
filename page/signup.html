@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMERTCO | Sign Up</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../CSS/signup.css">
+</head>
+<body>
+
+  <!-- Main Container -->
+  <div class="signup-container">
+
+    <!-- Back Button -->
+    <div class="back-btn">
+      <a href="../index.html" title="Back to Home">
+        <i class="fa-solid fa-arrow-left"></i> Back</a>
+    </div>
+
+    <!-- Left Section (Welcome Polygon) -->
+    <section class="welcome-section">
+      <div class="polygon-box">
+        <h2>Welcome to SMERTCO Furniture</h2>
+        <p>
+          Step into a world where craftsmanship meets comfort.  
+          Create your SMERTCO account and begin your journey of elegance and design.
+        </p>
+      </div>
+    </section>
+
+    <!-- Right Section (Form) -->
+    <section class="form-section">
+      <h1>Join the SMERTCO Family</h1>
+
+      <form action="#" method="post" class="signup-form">
+
+        <fieldset>
+          <legend>Create Your Account</legend>
+
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="password">Password</label>
+<div class="input-wrap">
+  <input type="password" id="password" name="password" placeholder="Create a password" required>
+  <button type="button" class="pw-toggle" aria-label="Show password">👁️</button>
+</div>
+<div id="pw-strength" class="pw-strength" aria-live="polite"></div>
+
+<label for="confirm">Confirm Password</label>
+<div class="input-wrap">
+  <input type="password" id="confirm" name="confirm" placeholder="Confirm your password" required>
+</div>
+<div id="pw-match" class="pw-match" aria-live="polite"></div>
+
+          <button type="submit" class="btn">Sign Up</button>
+        </fieldset>
+      </form>
+
+      <p class="redirect">
+        Already have an account?  
+        <a href="../page/login.html">Log in here</a>
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2025 SMERTCO Furniture | Designed by Eutycus</p>
+  </footer>
+</body>
+<script src="../JS/sign up.js"></script>
+</html>
